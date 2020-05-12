@@ -1,11 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/stylesheets/index.css">
+    <link rel="stylesheet" href="../public/stylesheets/indexcar.css">
+    <title>index</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <header>
+      <nav class="header encabezado">
+          <a href="/index"> <img class="logo" src="../public/images/Mono.jpeg"> </a>
+          <ul class="nav">
+            <a href="/index">
+              <li class="li1">index</li>
+            </a>
+            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+            </li>
+            <a href="/generos">
+              <li class="li1">Géneros</li>
+            </a>
+            <a class="preferidas" href="/PeliculasPreferidas">
+              <li class="li1">Mis películas preferidas</li>
+            </a>
+            <li class="buscador">
+              <form class="buscador1" action="/resultado" method="get">
+                <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador">
+                <button type="submit">Buscar</button>
+              </form>
+            </li>
+            <li class="nombre"> </li>
+          </ul>
+        </nav class="header">
+
+      <nav class="mqMobile">
+          <nav class="uk-navbar-container" uk-navbar>
+                  <div class="uk-navbar-left">
+                      <a href="/index" class="uk-navbar-item uk-logo">
+                          <img src="../public/images/Mono.jpeg" class="logoMq" alt="logo" srcset="">
+                      </a>
+                      <li class="nombre"> </li>
+                      <a class="uk-navbar-toggle dis-none h-40" id="navbar_toggle">
+                          <i uk-icon="icon: menu; ratio: 2">
+                            <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="menu"><rect x="2" y="4" width="16" height="1"></rect><rect x="2" y="9" width="16" height="1"></rect><rect x="2" y="14" width="16" height="1"></rect></svg>
+                          </i>
+
+
+                      </a>
+                      <div class="navbar-collapse" id="navbar_collapse" style="display: block;">
+                          <ul class="uk-navbar-nav">
+                            <ul class="nav">
+                              <a href="/index">
+                                <li class="li1">index</li>
+                              </a>
+                              <li class="logInMq"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+                              </li>
+                              <a href="/generos">
+                                <li class="li1">Géneros</li>
+                              </a>
+                              <a class="preferidasMq" href="/PeliculasPreferidas">
+                                <li class="li1" >Mis películas preferidas</li>
+                              </a>
+                              <li class="buscador">
+                                <form class="buscador1" action="/resultado" method="get">
+                                  <input type="search" name="buscador" class="resultado" placeholder="Buscador">
+                                  <button type="submit" class="botonBuscar">Buscar</button>
+                                </form>
+                              </li>
+                            </ul>
+                          </ul>
+                      </div>
+                  </div>
+            </nav>
+          </nav>
+
+    </header>
+
+<!-- Login -->
+  <div id="modal-login" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title uk-text-center">Log In</h2>
+        <form class="uk-flex uk-flex-column" action="" method="post">
+          <input type="text" name="nombre" value="" placeholder="Ingrese su nombre">
+          <input type="email" name="email" value="" placeholder="Ingrese su email">
+          <select class="" name="genero">
+            <option value="" selected disabled>Género</option>
+            <option value="h">Hombre</option>
+            <option value="m">Mujer</option>
+            <option value="o">Otro</option>
+          </select>
+            <p class="uk-text-right">
+              <button class="uk-button uk-button-default uk-modal-close" type="reset">Cancelar</button>
+              <button class="uk-button uk-button-secondary" type="submit">Enviar</button>
+            </p>
+        </form>
+    </div>
+</div>
+
+<section>
+  <div> <p class="subtitulos">Películas mas populares</p>
+    <!-- Container for the image gallery -->
+    <div class="container">
+    <!-- Full-width images with number text -->
+    <ul class="populares ">
+      <!-- js -->
+    </ul>
+    <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    <!-- Thumbnail images -->
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <div> <p class="subtitulos">Películas con mayor puntaje</p>
+    <!-- Container for the image gallery -->
+    <div class="container1">
+    <!-- Full-width images with number text -->
+    <ul class="puntaje">
+      <!-- js -->
+    </ul>
+    <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+    <!-- Image text -->
+      <div class="caption-container1">
+        <p id="caption1"></p>
+      </div>
+    <!-- Thumbnail images -->
+      <div class="row1">
+      </div>
+    </div>
+  </div>
+
+  <div><p class="subtitulos">Próximos estrenos</p>
+    <!-- Container for the image gallery -->
+    <div class="container2">
+    <!-- Full-width images with number text -->
+    <ul class="estrenos ">
+      <!-- js -->
+    </ul>
+    <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+    <!-- Image text -->
+      <div class="caption-container2">
+        <p id="caption"></p>
+      </div>
+    <!-- Thumbnail images -->
+      <div class="row2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <nav class="final">
+    <img class="movie" src="../public/images/logomovies.png" alt="">
+    <ul class="ul2">
+      <li class="li2">Matias Capparelli</li>
+      <li class="li2">Manuel Abril</li>
+      <li class="li2">Federico Koch</li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+
+  <script type="text/javascript" src="../public/javascripts/index.js">
+  </script>
+  <script type="text/javascript" src="../public/javascripts/indexcar.js">
+  </script>
+  <script type="text/javascript" src="../js/uikit.min.js">
+  </script>
+  <script type="text/javascript" src="../js/login.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+  <script src="main.js"></script>
+
 </html>
