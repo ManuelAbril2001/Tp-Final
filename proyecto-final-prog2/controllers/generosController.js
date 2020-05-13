@@ -5,6 +5,6 @@ module.exports = {
     },
 
     peliculasPorGenero: function(req,res){
-        res.send('Pagina de peliculas del genero con id' + req.params)
+        res.render('peliculasPorGenero')
     }
 }
