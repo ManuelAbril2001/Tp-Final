@@ -38,7 +38,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=6e11caa7480bb2cb18a5bf
       li += "<img src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
     li += "</li>"
 
-    populares.innerHTML += "<a href='peliculas.html?id=" + id + "'>"+ li + "</a>"
+    populares.innerHTML += "<a href='/peliculas?id=" + id + "'>"+ li + "</a>"
 
     div = "<div class='column'>"
       div += "<img class='demo cursor' style='width:100%' onclick='currentSlide(" + (i+1) + ")' src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
@@ -85,7 +85,7 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=6e11caa7480bb2cb18a5
       li += "<img src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
     li += "</li>"
 
-    puntaje.innerHTML += "<a href='peliculas.html?id=" + id + "'>"+ li + "</a>"
+    puntaje.innerHTML += "<a href='/peliculas?id=" + id + "'>"+ li + "</a>"
 
     div = "<div class='column1'>"
       div += "<img class='demo1 cursor' style='width:100%' onclick='currentSlide1(" + (i+1) + ")' src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
@@ -132,7 +132,7 @@ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=6e11caa7480bb2cb18a5b
     li += "<img src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
   li += "</li>"
 
-  estrenos.innerHTML += "<a href='peliculas.html?id=" + id + "'>"+ li + "</a>"
+  estrenos.innerHTML += "<a href='/peliculas?id=" + id + "'>"+ li + "</a>"
 
   div = "<div class='column2'>"
     div += "<img class="+'demo2 cursor'+" style="+'width:100%'+" onclick='currentSlide2(" + (i+1) + ")' src="+'https://image.tmdb.org/t/p/w500/'+ foto + ">"

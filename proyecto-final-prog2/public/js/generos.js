@@ -16,7 +16,7 @@ window.onload = function () {
       var name = arrayGeneros[i].name
       var id = arrayGeneros[i].id
 
-      generos.innerHTML += "<li> <a href='pelicularPorGenero.html?idgenero=" + id + "&name=" + name + "'> <p>"+ name + "</p> </a> </li>"
+      generos.innerHTML += "<li> <a href='/peliculasPorGenero?idgenero=" + id + "&name=" + name + "'> <p>"+ name + "</p> </a> </li>"
 
 
     }

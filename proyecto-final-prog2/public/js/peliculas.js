@@ -111,7 +111,7 @@ fetch(url)
 
       li = "<li class='li'>"
         li += "<p class='titulos'>"+ title + "</p>"
-        li += "<a href='peliculas.html?id=" + id + "'>"
+        li += "<a href='/peliculas?id=" + id + "'>"
         li += "<img class=imgPelis src=https://image.tmdb.org/t/p/w500/"+ foto + ">"
         li += "</a>"
       li += "</li>"

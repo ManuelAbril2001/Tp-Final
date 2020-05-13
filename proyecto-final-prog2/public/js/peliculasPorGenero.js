@@ -63,7 +63,7 @@ window.addEventListener("load",function () {
               li += "<p class='puntuacion'> <span> Puntuación:</span> " + puntuacion  + "/10</p>"
             li += "</li>"
 
-            tituloResultados.innerHTML += "<a href='peliculas.html?id=" + id + "'>"+ li + "</a>"
+            tituloResultados.innerHTML += "<a href='/peliculas?id=" + id + "'>"+ li + "</a>"
 
           }
       }

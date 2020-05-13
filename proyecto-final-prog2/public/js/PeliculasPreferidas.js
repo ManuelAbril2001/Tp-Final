@@ -31,7 +31,7 @@ console.log(arrayPeliculas[i]);
       var li;
       li= "<li class= 'liPelis'>"
       li+= "<p class='titulos'>"+titulo+"</h2>"
-      li += "<a href='peliculas.html?id=" + id.id + "'>"
+      li += "<a href='/peliculas?id=" + id.id + "'>"
       li += "<img class='imgPelis' class='info' src=" + url  + ">"
       li += "</a>"
       li += "</li>"
