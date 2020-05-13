@@ -9,9 +9,7 @@ const controller = require('../controllers/resultadosController')
 
 //localhost:3000/resultados
 router.get('/', controller.index)
-
-//localhost:3000/resultados/pelicula/:id
-router.get('/pelicula/:id', controller.pelicula)
+router.get('/resultados', controller.resultados)
 
 
 

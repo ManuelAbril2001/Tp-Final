@@ -6,5 +6,5 @@ module.exports = {
 
     peliculasPorGenero: function(req,res){
         res.render('peliculasPorGenero')
-    }
+    },
 }

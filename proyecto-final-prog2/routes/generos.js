@@ -5,7 +5,8 @@ var router = express.Router();
 const controller = require('../controllers/generosController')
 
 router.get('/', controller.index);
-router.get('/peliculasPorGenero', controller.peliculasPorGenero)
+router.get('/peliculasPorGenero', controller.peliculasPorGenero);
+
 
 
 
