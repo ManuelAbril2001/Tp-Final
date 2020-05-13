@@ -158,7 +158,7 @@ footer{
   left: 5px;
 }
 
-////////////////////////
+
 
 nav.mqMobile{
   display: none;
@@ -191,9 +191,7 @@ nav.mqMobile{
 
 
   }
-  .logo{
-    display: ;
-  }
+ 
 
 @media screen and (max-width:768px){
   .logoMq {
@@ -307,3 +305,4 @@ nav.mqMobile{
     nav.final{
       overflow: hidden;
     }
+  }
