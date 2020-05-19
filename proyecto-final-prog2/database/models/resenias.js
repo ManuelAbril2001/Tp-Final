@@ -31,6 +31,10 @@ module.exports= function(sequelize, dataTypes) {
        puntaje_pelicula_serie: {
            type: dataTypes.decimal
 
+       },
+
+       texto_resenia: {
+           type: dataTypes.varchar
        }
     
     };
