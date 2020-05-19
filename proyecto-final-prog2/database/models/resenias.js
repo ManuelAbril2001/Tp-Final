@@ -44,9 +44,9 @@ module.exports= function(sequelize, dataTypes) {
     let resenias = sequelize.define(alias,cols, config);
 
     resenias.associate = function(models){
-        resenias.belongsTo(models.Usuarios, {
+        resenias.belongsTo(models.usuario, {
 
-        as: 'usuarios',
+        as: 'usuario',
         primaryKey: 'id_usuario',
 
 

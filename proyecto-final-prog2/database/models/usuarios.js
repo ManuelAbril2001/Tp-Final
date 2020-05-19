@@ -1,9 +1,7 @@
 module.exports= function(sequelize, dataTypes) {
 
+    let alias= "usuario";
 
-    let alias= "Usuarios";
-
-    
     let cols = {
 
         id: {
@@ -39,17 +37,17 @@ let config = {
             timestamps: true
     }
 
- let Usuarios = sequelize.define(alias,cols, config);
+ let Usuarios = sequelize.define(alias,cols,config);
 
- Usuarios.associate = function(models){
-    Usuarios.hasMany(models.resenias, {
+ usuario.associate = function(models){
+    usuario.hasMany(models.resenias, {
 
         as: 'resenias',
         foreignKey: 'id_usuario'
 
     });
 
-    return Usuarios;
+    return usuario;
 }
 
 

@@ -2,6 +2,10 @@ section{
     background-color: grey;
 }
 
+div{
+  border-color: grey;
+}
+
 /* header */
 header{
     overflow: hidden;
@@ -68,9 +72,7 @@ header{
     display: none
   }
   
-  form input{
-    margin-bottom: 15px
-  }
+
   
   li.buscador{
     float: right;
