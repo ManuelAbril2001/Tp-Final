@@ -5,6 +5,6 @@ var router = express.Router();
 const controller = require('../controllers/registroController')
 
 router.get('/', controller.index);
-router.post('/validacion', controller.validacion)
+
 
 module.exports = router;
