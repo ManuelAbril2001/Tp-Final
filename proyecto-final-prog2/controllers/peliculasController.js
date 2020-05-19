@@ -1,25 +1,21 @@
-/* let db = require("../database/models") */
+let db = require("../database/models")
+let sequelize = db.sequelize
 
-module.exports = {
+let peliculasController = {
     index: function(req,res){
-        res.render('peliculas')
+        res.render("peliculas")
     },
-    
-/*     crear: function(req,res){
-        db.resenias.create({
-            id: req.params.id,
-            id_pelicula: req.params.id,
-            id_usuario: ,
-            texto_resenia: req.body.texto_resenia,
-            puntaje_pelicula_serie: req.body.puntaje
-            fecha_creacion: ,
-            fecha_actualizacion:
-        })
-    
 
-    }, */
+    crear: function (req,res) {
+        sequelize.query("SELECT*FROM resenias where id_pelicula =" + req.query.id )
+        .then(function(resultados){
+            let datos = resultados[0];
+
+         res.render("peliculas", {datos:datos,movie_id:req.query.id});
+         console.log(todo)
 
 
+    })}
+}
 
-
-    };
+    module.exports = peliculasController

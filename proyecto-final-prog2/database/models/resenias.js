@@ -1,40 +1,30 @@
 module.exports= function(sequelize, dataTypes) {
-
+    
     let alias= "resenias";
     
     let cols = {
 
         id: {
-            type: dataTypes.int,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
 
        id_pelicula: {
-            type: dataTypes.varchar
+            type: dataTypes.INTEGER
        },
 
        id_usuario: {
-            type: dataTypes.int
-       },
-
-       fecha_actualizacion:{
-
-        type: dataTypes.timestamps
-       },
-
-       fecha_creacion:{
-
-        type: dataTypes.timestamps
+            type: dataTypes.INTEGER
        },
 
        puntaje_pelicula_serie: {
-           type: dataTypes.decimal
+           type: dataTypes.DECIMAL
 
        },
 
        texto_resenia: {
-           type: dataTypes.varchar
+           type: dataTypes.STRING
        }
     
     };
@@ -42,20 +32,20 @@ module.exports= function(sequelize, dataTypes) {
 
     let config = {
             tableName: "resenias",
-            timestamps: true
+            timestamps: false
     };
 
     let resenias = sequelize.define(alias,cols, config);
 
-    resenias.associate = function(models){
+    /* resenias.associate = function(models){
         resenias.belongsTo(models.usuario, {
 
         as: 'usuario',
-        primaryKey: 'id_usuario',
+        foreignKey: 'id_usuario',
 
 
      });
-    }
+    } */
 
     return resenias;
 }

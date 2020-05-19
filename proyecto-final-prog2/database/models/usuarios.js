@@ -1,43 +1,38 @@
-module.exports= function(sequelize, dataTypes) {
+/* module.exports= function(sequelize, dataTypes) {
 
-    let alias= "usuario";
+    let alias= "usuarios";
 
     let cols = {
 
         id: {
-            type: dataTypes.int,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
 
         },
 
        Nombre_de_Usuario: {
-            type: dataTypes.varchar
+            type: dataTypes.INTEGER
        },
 
        Email: {
-            type: dataTypes.varchar
+            type: dataTypes.INTEGER
        },
 
        contrasenia: {
-            type: dataTypes.varchar
+            type: dataTypes.STRING
 
        },
 
-       Fecha_de_Nacimiento:{
-
-        type: dataTypes.timestamps
-       }
-    
     }
 }
 
 let config = {
             tableName: "usuarios",
-            timestamps: true
+            timestamps: false
     }
 
- let Usuarios = sequelize.define(alias,cols,config);
+ let usuario = sequelize.define(alias,cols, config);
 
  usuario.associate = function(models){
     usuario.hasMany(models.resenias, {
@@ -50,7 +45,61 @@ let config = {
     return usuario;
 }
 
+ */
 
+ module.exports= function(sequelize, dataTypes) {
+    
+   let alias = "usuarios"
+ 
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        
+        },
+
+        email:{
+            type: dataTypes.STRING
+        },
+
+        contrasenia:{
+            type: dataTypes.STRING
+        },
+
+        nombre_de_usuario:{
+            type: dataTypes.STRING
+        }
+
+
+    };
+
+    let config= {
+        tableName: "usuarios",
+        timestamps: false
+    }
+
+
+
+    let usuarios = sequelize.define(alias,cols,config);
+
+    return usuarios;
+
+ }
+
+
+
+/*     usuarios.associate = function(models){
+        usuarios.belongsTo(models.resenias, {
+
+        as: 'resenia',
+        foreignKey: 'id_usuario',
+
+
+     });
+    } */
+
+ 
 
 
 
