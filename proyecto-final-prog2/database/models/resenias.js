@@ -18,7 +18,7 @@ module.exports= function(sequelize, dataTypes) {
             type: dataTypes.INTEGER
        },
 
-       puntaje_pelicula_serie: {
+       puntaje: {
            type: dataTypes.DECIMAL
 
        },
@@ -37,15 +37,15 @@ module.exports= function(sequelize, dataTypes) {
 
     let resenias = sequelize.define(alias,cols, config);
 
-    /* resenias.associate = function(models){
-        resenias.belongsTo(models.usuario, {
+    resenias.associate = function(models){
+        resenias.belongsTo(models.usuarios, {
 
         as: 'usuario',
         foreignKey: 'id_usuario',
 
 
      });
-    } */
+    }
 
     return resenias;
 }

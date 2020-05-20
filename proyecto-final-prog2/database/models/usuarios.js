@@ -1,53 +1,4 @@
-/* module.exports= function(sequelize, dataTypes) {
-
-    let alias= "usuarios";
-
-    let cols = {
-
-        id: {
-            type: dataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-
-        },
-
-       Nombre_de_Usuario: {
-            type: dataTypes.INTEGER
-       },
-
-       Email: {
-            type: dataTypes.INTEGER
-       },
-
-       contrasenia: {
-            type: dataTypes.STRING
-
-       },
-
-    }
-}
-
-let config = {
-            tableName: "usuarios",
-            timestamps: false
-    }
-
- let usuario = sequelize.define(alias,cols, config);
-
- usuario.associate = function(models){
-    usuario.hasMany(models.resenias, {
-
-        as: 'resenias',
-        foreignKey: 'id_usuario'
-
-    });
-
-    return usuario;
-}
-
- */
-
- module.exports= function(sequelize, dataTypes) {
+module.exports= function(sequelize, dataTypes) {
     
    let alias = "usuarios"
  
@@ -82,6 +33,17 @@ let config = {
 
 
     let usuarios = sequelize.define(alias,cols,config);
+
+    usuarios.associate = function(models){
+        usuarios.hasMany(models.resenias, {
+    
+            as: 'resenias',
+            foreignKey: 'id_usuario'
+    
+        });
+    
+     
+    }
 
     return usuarios;
 
