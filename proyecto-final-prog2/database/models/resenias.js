@@ -25,7 +25,9 @@ module.exports= function(sequelize, dataTypes) {
 
        texto_resenia: {
            type: dataTypes.STRING
-       }
+       },
+
+    
     
     };
 

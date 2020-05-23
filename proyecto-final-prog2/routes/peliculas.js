@@ -6,7 +6,9 @@ const controller = require('../controllers/peliculasController')
 
 router.get('/', controller.index);
 
-router.post("/crear", controller.crear)
+router.post("/crear", controller.crear);
+
+
 
 
 module.exports = router;

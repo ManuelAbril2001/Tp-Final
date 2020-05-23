@@ -6,14 +6,13 @@ let peliculasController = {
     },
 
     crear: function (req,res) {
-        
         db.resenia.create({
             texto_resenia: req.body.texto_resenia,
             puntaje: req.body.puntaje,
-            id_pelocula: req.query.id
-           
+            id_pelicula: req.query.id
+          
+            });
 
-        })
         res.redirect("/peliculas?id=" + req.params.id)
    
 
