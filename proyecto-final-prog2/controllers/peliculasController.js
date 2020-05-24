@@ -6,7 +6,7 @@ let peliculasController = {
     },
 
     crear: function (req,res) {
-        db.resenia.create({
+        db.resenias.create({
             texto_resenia: req.body.texto_resenia,
             puntaje: req.body.puntaje,
             id_pelicula: req.query.id
