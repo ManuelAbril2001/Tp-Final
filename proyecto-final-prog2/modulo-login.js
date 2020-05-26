@@ -26,7 +26,7 @@ let moduloLogin = {
     validar: function (email, pass) {
         return db.usuarios.findOne({
             where:{
-                email:email,
+                email: email,
                 contrasenia: pass
             },
         })
