@@ -106,7 +106,7 @@
 
       </ul>
       
-      <form class="resenia" name= "datos" action="/peliculas/crear" method="post">
+      <form class="resenia" name= "datos" action="/resenia/crear/<%= idPelicula %>" method="POST">
         <input type="email" name="email" class="resenia" placeholder="Email">
         <input type="password" name="contrasenia" class="resenia" placeholder="Password">
         <input type="number" name="puntaje" class="resenia" placeholder="Coloque puntaje">
@@ -115,7 +115,7 @@
       </form>   
       
 
-      <button class="recomendaciones uk-button uk-button-text" type="button" name="button">Tambien podría interesarte</button>
+      <button class="recomendaciones uk-button uk-button-text" type="submit" name="button">Tambien podría interesarte</button>
       <ul class="display-none recomen">
       </ul>
     </section>
