@@ -32,7 +32,7 @@ module.exports= function(sequelize, dataTypes) {
 
 
 
-    let usuarios = sequelize.define(alias,cols,config);
+    let usuarios = sequelize.define("usuarios",cols,config);
 
     usuarios.associate = function(models){
         usuarios.hasMany(models.resenias, {
