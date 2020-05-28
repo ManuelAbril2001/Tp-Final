@@ -1,7 +1,7 @@
 let db = require("../database/models")
 //const bcrypt = require('bcryptjs');
 //let moduloLogin = require('../modulo-login')
-
+let peliculasController = 
 module.exports = {
     index: function(req,res){
         res.render("peliculas",{
@@ -44,7 +44,7 @@ module.exports = {
               
    
 
-    },
+    
 
     /* editar: function(req, res){
         let pedidoResenia = db.resenias.findByPK(req.params.id);
@@ -80,7 +80,7 @@ borrar: function(req,res){
     
 } */
 
-}
+
 
 
 module.exports = peliculasController
