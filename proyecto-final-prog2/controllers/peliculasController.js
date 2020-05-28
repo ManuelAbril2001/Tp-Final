@@ -83,7 +83,7 @@ borrar: function(req,res){
 
 
 
-module.exports = peliculasController
+
 
 
 
