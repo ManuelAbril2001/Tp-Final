@@ -1,7 +1,7 @@
 let db = require("../database/models")
 //const bcrypt = require('bcryptjs');
 //let moduloLogin = require('../modulo-login')
-let peliculasController = 
+
 module.exports = {
     index: function(req,res){
         res.render("peliculas",{
