@@ -9,7 +9,7 @@ const controller = require('../controllers/resultadosController')
 
 //localhost:3000/resultados
 router.get('/', controller.index)
-router.get('/resultados', controller.resultados)
+router.get('/usuarios', controller.resultados)
 
 
 

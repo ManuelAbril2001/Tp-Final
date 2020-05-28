@@ -10,38 +10,32 @@ module.exports = {
             {
                 where: [
                    {
-                       email:{[op.like]:"%" + req.query.buscador + "%"}
+                       email: 
+                       {
+                           [op.like]:"%" + req.query.buscador + "%"
+                        }
                    }
                 ],
             }
         )
         .then(function(email){
-            if(email == 0){
-                db.usuarios.findAll(
-                    {
-                        where: [
-                            {
-                                nombre_de_usuario: {[op.like]:"%" + req.query.buscador + "%"}
-                            }
-                        ]
-                    }
-                )
-        .then(function(nombre){
-            if(nombre == 0){
-                res.render('resultados')
-            } else{
-                res.render('ubuscador', {
-                    nombre:nombre
-                })
+            if(email.length != 0){
+                return res.render('ubuscador', {nombre: email})
+                
             }
+            db.usuarios.findAll(
+                {
+                    where: [
+                        {
+                            nombre_de_usuario: {[op.like]:"%" + req.query.buscador + "%"}
+                        }
+                    ]
+                }
+            )
+            .then(function(nombre){
+                return res.render('ubuscador', {nombre: nombre})
+             })
         })
-
-            } else{
-                res.render('ubuscadormail', {
-                    email:email
-                })
-            }
-        }
-     ) 
-    },
+    
+    }
 }
