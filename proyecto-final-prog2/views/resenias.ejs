@@ -109,7 +109,15 @@
 
 <section>
 <p>Resenias de otros usuarios:</p>
+<% if(resenia.length > 0) { %>
 
+  <% for (let i=0 ; i < resenia.length; i++) {%>
+    <p> <%= resenia[i].texto_resenia %></p>
+    <p> <%= resenia[i].puntaje %>  </p>
+     <% } %>
+    <% } else { %>
+      <p>Todavia no hay resenias</p>
+      <% } %>
 
 </section>
 

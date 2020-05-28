@@ -1,6 +1,6 @@
 let db = require("../database/models")
 //const bcrypt = require('bcryptjs');
-//let moduloLogin = require('../modulo-login')
+
 
 module.exports = {
     index: function(req,res){
@@ -46,39 +46,7 @@ module.exports = {
 
     
 
-    /* editar: function(req, res){
-        let pedidoResenia = db.resenias.findByPK(req.params.id);
-
-        Promise.all([pedidoResenia])
-           .then(function(resenia){
-               res.render('editarResenia', {resenia:resenia});
-
-           })
-    },
-
-   actualizar: function(req,res){
-    db.resenias.update({
-        texto_resenia: req.body.texto_resenia,
-        puntaje: req.body.puntaje,
-        id_pelicula: req.query.id
-   }, {
-       where: {
-           id: req.params.id
-       }
-   });
-
-    res.redirect('/peliculas/' + req.params.id);
-},
-
-borrar: function(req,res){
-    db.resenias.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-        res.redirect('/peliculas');
-    
-} */
+   
 
 
 
