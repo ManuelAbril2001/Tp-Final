@@ -2,19 +2,14 @@ let db = require("../database/models")
 //const bcrypt = require('bcryptjs');
 //let moduloLogin = require('../modulo-login')
 
-let peliculasController = {
+module.exports = {
     index: function(req,res){
-        res.render("peliculas")
+        res.render("peliculas",{
+            idPelicula: req.query.id
+        })
     },
-    crear: function (req,res) {
-        db.resenias.create({
-        texto_resenia: req.body.texto_resenia,
-        puntaje: req.body.puntaje,
-        id_pelicula: req.query.id
-
-});
-
-        res.redirect("/peliculas?id=" + req.params.id)
+}
+   
    
         // const hash = bcrypt.hashSync(req.body.password, 10); 
    
@@ -49,11 +44,46 @@ let peliculasController = {
               
    
 
-    }
-              
-}
+    
 
-module.exports = peliculasController
+    /* editar: function(req, res){
+        let pedidoResenia = db.resenias.findByPK(req.params.id);
+
+        Promise.all([pedidoResenia])
+           .then(function(resenia){
+               res.render('editarResenia', {resenia:resenia});
+
+           })
+    },
+
+   actualizar: function(req,res){
+    db.resenias.update({
+        texto_resenia: req.body.texto_resenia,
+        puntaje: req.body.puntaje,
+        id_pelicula: req.query.id
+   }, {
+       where: {
+           id: req.params.id
+       }
+   });
+
+    res.redirect('/peliculas/' + req.params.id);
+},
+
+borrar: function(req,res){
+    db.resenias.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        res.redirect('/peliculas');
+    
+} */
+
+
+
+
+
 
 
 

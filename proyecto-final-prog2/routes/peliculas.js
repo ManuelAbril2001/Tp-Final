@@ -6,7 +6,19 @@ const controller = require('../controllers/peliculasController')
 
 router.get('/', controller.index);
 
-router.post("/crear", controller.crear);
+
+
+// Editar resenia
+
+//router.get('/editar/:id', peliculasController.editar);
+
+// Actualizar resenia
+
+//router.post('/editar/:id', peliculasController.actualizar);
+
+// Borrar resenia
+
+//router.post('/borrar/:id', peliculasController.borrar);
 
 
 

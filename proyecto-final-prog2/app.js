@@ -12,7 +12,7 @@ var generosRouter = require('./routes/generos');
 var peliculasRouter = require('./routes/peliculas');
 var peliculasPorGeneroRouter = require('./routes/peliculasPorGenero');
 var registroRouter = require('./routes/registro')
-var ubuscadorRouter = require('./routes/ubuscador')
+var reseniaRouter= require("./routes/resenia")
 
 var app = express();
 
@@ -33,8 +33,8 @@ app.use('/resultados', resultadosRouter);
 app.use('/generos', generosRouter);
 app.use('/peliculas',peliculasRouter);
 app.use('/peliculasPorGenero', peliculasPorGeneroRouter);
-app.use('/registro', registroRouter)
-app.use('/ubuscador', ubuscadorRouter)
+app.use('/registro', registroRouter);
+app.use('/resenia', reseniaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
