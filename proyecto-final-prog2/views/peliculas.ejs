@@ -120,6 +120,20 @@
       </ul>
     </section>
 
+    <section>
+      <p>Resenias de otros usuarios:</p>
+<% if(resenia.length > 0) { %>
+  <% for (let i=0 ; i < resenia.length; i++) {%>
+    <p> Resenia: <%= resenia[i].texto_resenia %></p>
+    <p> Puntaje: <%= resenia[i].puntaje %>  </p>
+    <p> Fecha de Creacion: <%= resenia[i].texto_resenia %></p>
+    <p> Fecha de actualizacion: <%= resenia[i].texto_resenia %></p>
+     <% } %>
+    <% } else { %>
+      <p>Todavia no hay resenias</p>
+      <% } %>
+    </section>
+
     <footer>
       <nav class="final">
         <img class="movie" src="/img/logomovies.png" alt="">

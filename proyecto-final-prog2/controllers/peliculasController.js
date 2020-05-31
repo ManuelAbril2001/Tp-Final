@@ -4,9 +4,15 @@ let db = require("../database/models")
 
 module.exports = {
     index: function(req,res){
-        res.render("peliculas",{
-            idPelicula: req.query.id
+        db.resenias.findAll()
+        .then(data =>{
+            res.render("peliculas",{
+                idPelicula: req.query.id,
+                resenia: data
+            })
+
         })
+        
     },
 }
    
