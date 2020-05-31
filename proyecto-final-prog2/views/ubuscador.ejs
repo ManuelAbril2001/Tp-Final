@@ -19,6 +19,12 @@
                   <li class="li1">index</li>
                 </a>
                 <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+    
+                </li>
+                <li class= "logIn">
+                  <form class= "logIn1" action="/registro" method="get">
+                  <button type= "submit" action= "/registro">Register</button>
+                </form>
                 </li>
                 <a href="/generos">
                   <li class="li1">Géneros</li>
@@ -28,7 +34,13 @@
                 </a>
                 <li class="buscador">
                   <form class="buscador1" action="/resultados" method="get">
-                    <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador">
+                    <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de Peliculas">
+                    <button type="submit">Buscar</button>
+                  </form>
+                </li>
+                <li class="buscador">
+                  <form class="buscador1" action="/resultados/usuarios" method="get">
+                    <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de Usuarios">
                     <button type="submit">Buscar</button>
                   </form>
                 </li>
@@ -76,6 +88,7 @@
                       </div>
                 </nav>
               </nav>
+    
         </header>
         <h1>Usuarios</h1>
         <% for(let i = 0; i < nombre.length; i ++) { %>
