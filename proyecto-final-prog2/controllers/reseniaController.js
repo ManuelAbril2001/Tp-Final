@@ -5,9 +5,15 @@ let moduloLogin = require('../moduloLogin')
 
 module.exports = {
     index: function(req,res){
-        db.resenias.findAll()
+        db.resenias.findAll({
+            include:{
+                association:"usuarios"
+            }
+        })
 
         .then(data => {
+            return res.send(data)
+            
             res.render('resenias', {
                 resenia: data
             })

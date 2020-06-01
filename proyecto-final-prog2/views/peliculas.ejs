@@ -135,8 +135,9 @@
 
     <section>
       <p>Resenias de otros usuarios:</p>
-<% if(resenia.length > 0) { %>
+  <% if(resenia.length > 0) { %>
   <% for (let i=0 ; i < resenia.length; i++) {%>
+    <p> Usuario: <%= resenia[i].usuario.nombre_de_usuario %> </p>
     <p> Resenia: <%= resenia[i].texto_resenia %></p>
     <p> Puntaje: <%= resenia[i].puntaje %>  </p>
     <p> Fecha de Creacion: <%= resenia[i].texto_resenia %></p>

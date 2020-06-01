@@ -8,24 +8,22 @@ module.exports = {
         res.render('login')
 
     },
-    login: function(email,pass){
+    login: function(req,res){
         
         return db.usuarios.findOne({
             where:{
-                email:email,
-                contrasenia:password
+                email:req.body.email,
+                contrasenia:req.body.password
             },
         })
 
         .then(results => {
             if(results!=null){
-                let validacion = bcrypt.compareSync(pass, results.password)
-                moduloLogin.validar(email,contrasenia)
+                console.log(results.contrasenia)
+                // let validacion = bcrypt.compareSync(req.body.password, results.contrasenia)
+                const validacion = moduloLogin.validar(req.body.email,req.body.password)
                 if(validacion){  
-                    res.redirect('/resenia')
-                    return results
-                   
-                    
+                    return res.redirect('/resenia')                  
                 }else{
                     return undefined
                 }
