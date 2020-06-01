@@ -27,7 +27,14 @@ module.exports= function(sequelize, dataTypes) {
            type: dataTypes.STRING
        },
 
-    
+       fecha_creacion:{
+           type: dataTypes.DATE
+       },
+
+       fecha_actualizacion:{
+           type: dataTypes.DATE
+       }
+   
     
     };
 

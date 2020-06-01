@@ -18,7 +18,11 @@
             <a href="/">
               <li class="li1">index</li>
             </a>
-            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+            <li class= "logIn">
+              <form class= "logIn1" action="/users" method="get">
+              <button type= "submit" action= "/users">Login</button>
+            </form>
+            </li>
 
             </li>
             <li class= "logIn">
@@ -29,8 +33,11 @@
             <a href="/generos">
               <li class="li1">Géneros</li>
             </a>
-            <a class="preferidas" href="/PeliculasPreferidas">
+            <a class="nav" href="/PeliculasPreferidas">
               <li class="li1">Mis películas preferidas</li>
+            </a>
+            <a class="nav" href="/users">
+              <li class="li1">Mis resenias</li>
             </a>
             <li class="buscador">
               <form class="buscador1" action="/resultados" method="get">
@@ -47,6 +54,7 @@
             <li class="nombre"> </li>
           </ul>
         </nav class="header">
+
         <nav class="mqMobile">
           <nav class="uk-navbar-container" uk-navbar>
                   <div class="uk-navbar-left">
@@ -80,6 +88,9 @@
                               <a class="preferidasMq" href="/PeliculasPreferidas">
                                 <li class="li1" >Mis películas preferidas</li>
                               </a>
+                              <a class="preferidasMq" href="/users">
+                                <li class="li1">Mis resenias</li>
+                              </a>
                               <li class="buscador">
                                 <form class="buscador1" action="/resultados" method="get">
                                   <input type="search" name="buscador" class="resultado" placeholder="Buscador">
@@ -101,27 +112,6 @@
 
     </header>
 
-
-<!-- Login -->
-<div id="modal-login" uk-modal>
-  <div class="uk-modal-dialog uk-modal-body">
-      <h2 class="uk-modal-title uk-text-center">Log In</h2>
-      <form class="uk-flex uk-flex-column" action="" method="post">
-        <input type="email" name="email" value="" placeholder="Ingrese su email">
-        <input type="password" name="password" value="" placeholder="contrasenia">
-        <select class="" name="genero">
-          <option value="" selected disabled>Género</option>
-          <option value="h">Hombre</option>
-          <option value="m">Mujer</option>
-          <option value="o">Otro</option>
-        </select>
-          <p class="uk-text-right">
-            <button class="uk-button uk-button-default uk-modal-close" type="reset">Cancelar</button>
-            <button class="uk-button uk-button-secondary" type="submit">Enviar</button>
-          </p>
-      </form>
-  </div>
-</div>
     <section>
       <div>
         <ul class="resultadosDeBusqueda">

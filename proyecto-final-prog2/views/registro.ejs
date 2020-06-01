@@ -20,7 +20,11 @@
             <a href="/">
               <li class="li1">index</li>
             </a>
-            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+            <li class= "logIn">
+              <form class= "logIn1" action="/users" method="get">
+              <button type= "submit" action= "/users">Login</button>
+            </form>
+            </li>
 
             </li>
             <li class= "logIn">
@@ -31,8 +35,11 @@
             <a href="/generos">
               <li class="li1">Géneros</li>
             </a>
-            <a class="preferidas" href="/PeliculasPreferidas">
+            <a class="nav" href="/PeliculasPreferidas">
               <li class="li1">Mis películas preferidas</li>
+            </a>
+            <a class="nav" href="/users">
+              <li class="li1">Mis resenias</li>
             </a>
             <li class="buscador">
               <form class="buscador1" action="/resultados" method="get">
@@ -83,6 +90,9 @@
                               <a class="preferidasMq" href="/PeliculasPreferidas">
                                 <li class="li1" >Mis películas preferidas</li>
                               </a>
+                              <a class="preferidasMq" href="/users">
+                                <li class="li1">Mis resenias</li>
+                              </a>
                               <li class="buscador">
                                 <form class="buscador1" action="/resultados" method="get">
                                   <input type="search" name="buscador" class="resultado" placeholder="Buscador">
@@ -103,6 +113,7 @@
           </nav>
 
     </header>
+
    
     <section class="uk-section uk-section-xsmall" uk-height-viewport="offset-top: true">
       <div class="uk-container">

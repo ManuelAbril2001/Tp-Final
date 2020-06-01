@@ -37,7 +37,7 @@ module.exports = {
         })
     },
 
-     /* editar: function(req, res){
+    editar: function(req, res){
         let pedidoResenia = db.resenias.findByPK(req.params.id);
 
         Promise.all([pedidoResenia])
@@ -69,5 +69,7 @@ borrar: function(req,res){
     })
         res.redirect('/peliculas');
     
-} */
+}
+
+     
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/uikit.min.css">
@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
-    <title>Generos</title>
+    <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="/css/iniciocar.css">
+    <title>index</title>
   </head>
   <body>
     <header>
@@ -112,43 +114,72 @@
 
     </header>
 
-    
-
-
     <section>
-      <p class="subtitulos">Géneros de peliculas:</p>
-      <div>
-        <ul class="generos">
+        <div class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+            <div class="uk-width-1-1">
+                <div class="uk-container">
+                    <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                        <div class="uk-width-1-1@m">
+                            <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                                <h3 class="uk-card-title uk-text-center">Welcome back!</h3>
+                                <form>
+                                    <div class="uk-margin">
+                                        <div class="uk-inline uk-width-1-1">
+                                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                            <input name="email" placeholder="email" class="uk-input uk-form-large" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="uk-margin">
+                                        <div class="uk-inline uk-width-1-1">
+                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                            <input name="password" placeholder="contrasenia" class="uk-input uk-form-large" type="password">	
+                                        </div>
+                                    </div>
+                                    <div class="uk-margin">
+                                      <form method="POST" action="/users/login"></form>
+                                        <button class="uk-button uk-button-primary uk-button-large uk-width-1-1">Login</button>
+                                    </div>
+                                    <div class="uk-text-small uk-text-center">
+                                        Not registered? <a href="/registro">Create an account</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        </ul>
-      </div>
 
     </section>
 
-    <footer>
-      <nav class="final">
-        <img class="movie" src="/img/logomovies.png" alt="">
-        <ul class="ul2">
-          <li class="li2">Matias Capparelli</li>
-          <li class="li2">Manuel Abril</li>
-          <li class="li2">Federico Koch</li>
-        </ul>
-      </nav>
-    </footer>
-  </body>
 
+<footer>
+  <nav class="final">
+    <img class="movie" src="/img/logomovies.png" alt="">
+    <ul class="ul2">
+      <li class="li2">Matias Capparelli</li>
+      <li class="li2">Manuel Abril</li>
+      <li class="li2">Federico Koch</li>
+    </ul>
+  </nav>
+</footer>
 
+</body>
 
-<script type="text/javascript" src="/js/generos.js">
-</script>
-<script type="text/javascript" src="/js/uikit.min.js">
-</script>
-<script type="text/javascript"src="/js/login.js">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
-
-
+  <script type="text/javascript" src="/js/inicio.js">
+  </script>
+  <script type="text/javascript" src="/js/iniciocar.js">
+  </script>
+  <script type="text/javascript" src="/js/uikit.min.js">
+  </script>
+  <script type="text/javascript" src="/js/login.js">
+  </script>
+<!--   <script type="text/javascript" src="/js/resultados.js">
+  </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+  <script src="main.js"></script>
 
 </html>

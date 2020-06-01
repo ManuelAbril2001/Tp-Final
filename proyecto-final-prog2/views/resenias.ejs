@@ -19,7 +19,11 @@
             <a href="/">
               <li class="li1">index</li>
             </a>
-            <li class="logIn"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
+            <li class= "logIn">
+              <form class= "logIn1" action="/users" method="get">
+              <button type= "submit" action= "/users">Login</button>
+            </form>
+            </li>
 
             </li>
             <li class= "logIn">
@@ -30,8 +34,11 @@
             <a href="/generos">
               <li class="li1">Géneros</li>
             </a>
-            <a class="preferidas" href="/PeliculasPreferidas">
+            <a class="nav" href="/PeliculasPreferidas">
               <li class="li1">Mis películas preferidas</li>
+            </a>
+            <a class="nav" href="/users">
+              <li class="li1">Mis resenias</li>
             </a>
             <li class="buscador">
               <form class="buscador1" action="/resultados" method="get">
@@ -82,6 +89,9 @@
                               <a class="preferidasMq" href="/PeliculasPreferidas">
                                 <li class="li1" >Mis películas preferidas</li>
                               </a>
+                              <a class="preferidasMq" href="/users">
+                                <li class="li1">Mis resenias</li>
+                              </a>
                               <li class="buscador">
                                 <form class="buscador1" action="/resultados" method="get">
                                   <input type="search" name="buscador" class="resultado" placeholder="Buscador">
@@ -103,40 +113,25 @@
 
     </header>
 
-<!-- Login -->
-<!-- Login -->
-<div id="modal-login" uk-modal>
-  <div class="uk-modal-dialog uk-modal-body">
-      <h2 class="uk-modal-title uk-text-center">Log In</h2>
-      <form class="uk-flex uk-flex-column" action="" method="post">
-        <input type="email" name="email" value="" placeholder="Ingrese su email">
-        <input type="password" name="password" value="" placeholder="contrasenia">
-        <select class="" name="genero">
-          <option value="" selected disabled>Género</option>
-          <option value="h">Hombre</option>
-          <option value="m">Mujer</option>
-          <option value="o">Otro</option>
-        </select>
-          <p class="uk-text-right">
-            <button class="uk-button uk-button-default uk-modal-close" type="reset">Cancelar</button>
-            <button class="uk-button uk-button-secondary" type="submit">Enviar</button>
-          </p>
-      </form>
-  </div>
-</div>
 
 <section>
+
+  <div class="resenia">
 <p>Resenias de otros usuarios:</p>
 <% if(resenia.length > 0) { %>
   <% for (let i=0 ; i < resenia.length; i++) {%>
-    <p> Resenia: <%= resenia[i].texto_resenia %></p>
-    <p> Puntaje: <%= resenia[i].puntaje %>  </p>
-    <p> Fecha de Creacion: <%= resenia[i].texto_resenia %></p>
-    <p> Fecha de actualizacion: <%= resenia[i].texto_resenia %></p>
+    <div class="camporesenia">
+      <p> Resenia: <%= resenia[i].texto_resenia %></p>
+      <p> Puntaje: <%= resenia[i].puntaje %>  </p>
+      <p> Fecha de Creacion: <%= resenia[i].fecha_creacion %></p>
+      <p> Fecha de actualizacion: <%= resenia[i].fecha_actualizacion %></p>
+    </div>
+
      <% } %>
     <% } else { %>
       <p>Todavia no hay resenias</p>
       <% } %>
+    </div>
 
 </section>
 

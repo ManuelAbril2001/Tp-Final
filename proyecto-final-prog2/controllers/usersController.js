@@ -1,24 +1,13 @@
 let db = require("../database/models")
 let Op = db.sequelize.Op;
-//const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 let moduloLogin = require('../moduloLogin')
 
 module.exports = {
     index: function(req,res){
-        res.render('registro')
+        res.render('login')
 
     },
-    crear: function(req, res){
-        db.usuarios.create({ 
-            email: req.body.email,
-            contrasenia: req.body.password,
-            nombre_de_usuario: req.body.username,
-            fecha_de_nacimiento: req.body.nacimiento
-
-        })
-        res.redirect("/registro")
-    },
-
     login: function(email,pass){
         
         return db.usuarios.findOne({
@@ -31,9 +20,12 @@ module.exports = {
         .then(results => {
             if(results!=null){
                 let validacion = bcrypt.compareSync(pass, results.password)
-                if(validacion){
-                    return results;
-
+                moduloLogin.validar(email,contrasenia)
+                if(validacion){  
+                    res.redirect('/resenia')
+                    return results
+                   
+                    
                 }else{
                     return undefined
                 }
@@ -41,6 +33,10 @@ module.exports = {
                     return undefined
                 }
             })
+        
+            
+
+            
         
     }
     
