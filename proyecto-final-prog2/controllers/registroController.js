@@ -1,6 +1,6 @@
 let db = require("../database/models")
 let Op = db.sequelize.Op;
-//const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 let moduloLogin = require('../moduloLogin')
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
     crear: function(req, res){
         db.usuarios.create({ 
             email: req.body.email,
-            contrasenia: req.body.password,
+            contrasenia: bcrypt.hashSync(req.body.password,10),
             nombre_de_usuario: req.body.username,
             fecha_de_nacimiento: req.body.nacimiento
 
@@ -19,7 +19,7 @@ module.exports = {
         res.redirect("/registro")
     },
 
-    login: function(email,pass){
+  /*   login: function(email,pass){
         
         return db.usuarios.findOne({
             where:{
@@ -42,7 +42,7 @@ module.exports = {
                 }
             })
         
-    }
+    } */
     
 
 }

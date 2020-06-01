@@ -10,25 +10,14 @@ module.exports = {
     },
     login: function(req,res){
         
-        return db.usuarios.findOne({
-            where:{
-                email:req.body.email,
-                contrasenia:req.body.password
-            },
-        })
 
+        moduloLogin.validar(req.body.email, req.body.password)
         .then(results => {
             if(results!=null){
-                console.log(results.contrasenia)
-                let validacion = bcrypt.compareSync(req.body.password, results.contrasenia)
-                moduloLogin.validar(req.body.email,req.body.password)
-                if(validacion){  
-                    return res.redirect('/resenia')                  
-                }else{
-                    return undefined
-                }
+                    return res.redirect('/resenias')                  
+
             }else{
-                    return undefined
+                    res.send("error de login")
                 }
             })
         
