@@ -1,7 +1,7 @@
 let db = require("../database/models")
 let Op = db.sequelize.Op;
 const bcrypt = require('bcryptjs');
-let moduloLogin = require('../moduloLogin')
+let moduloLogin = require('../moduloLogin');
 
 module.exports = {
     index: function(req,res){
@@ -20,8 +20,8 @@ module.exports = {
         .then(results => {
             if(results!=null){
                 console.log(results.contrasenia)
-                // let validacion = bcrypt.compareSync(req.body.password, results.contrasenia)
-                const validacion = moduloLogin.validar(req.body.email,req.body.password)
+                let validacion = bcrypt.compareSync(req.body.password, results.contrasenia)
+                moduloLogin.validar(req.body.email,req.body.password)
                 if(validacion){  
                     return res.redirect('/resenia')                  
                 }else{
