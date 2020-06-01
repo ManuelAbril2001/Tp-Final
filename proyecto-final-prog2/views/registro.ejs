@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/uikit.min.css">
+    <link rel="stylesheet" href="/css/registro.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Mono:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit-core-rtl.min.css">
@@ -49,7 +50,7 @@
           </ul>
         </nav class="header">
 
-      <nav class="mqMobile">
+        <nav class="mqMobile">
           <nav class="uk-navbar-container" uk-navbar>
                   <div class="uk-navbar-left">
                       <a href="/" class="uk-navbar-item uk-logo">
@@ -71,6 +72,11 @@
                               </a>
                               <li class="logInMq"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
                               </li>
+                              <li class= "li1">
+                                <form class= "logInMq" action="/registro" method="get">
+                                <button type= "submit" action= "/registro">Register</button>
+                              </form>
+                              </li>
                               <a href="/generos">
                                 <li class="li1">Géneros</li>
                               </a>
@@ -81,6 +87,12 @@
                                 <form class="buscador1" action="/resultados" method="get">
                                   <input type="search" name="buscador" class="resultado" placeholder="Buscador">
                                   <button type="submit" class="botonBuscar">Buscar</button>
+                                </form>
+                              </li>
+                              <li class="buscador">
+                                <form class="buscador1" action="/resultados/usuarios" method="get">
+                                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de Usuarios">
+                                  <button class= "botonBuscar" type="submit">Buscar</button>
                                 </form>
                               </li>
                             </ul>
@@ -132,16 +144,17 @@
                 </div>
               </div>
               <div class="uk-margin">
-                <label class="uk-form-label" for="repeat_password">
-                  Repeat Password
+                <label class="uk-form-label" for="password">
+                  Fecha de nacimiento
                 </label>
                 <div class="uk-form-controls">
                   <div class="uk-inline uk-width-1-1">
-                    <a class="uk-form-icon uk-form-icon-flip" uk-tooltip="title: Must match the password field.<br>This field is required.; pos: bottom-right"><i class="fas fa-info-circle"></i></a>
-                    <input class="uk-input" id="repeat_password" name="repeat_password" type="password">
+                    <a class="uk-form-icon uk-form-icon-flip" uk-tooltip="title: Minimum 8 characters.<br>This field is required.; pos: bottom-right"><i class="fas fa-info-circle"></i></a>
+                    <input class="uk-input" id="password" name="nacimiento" type="date">
                   </div>
                 </div>
               </div>
+             
               <div class="uk-margin">
                 <label>
                   <input class="uk-checkbox" name="terms_of_service" type="checkbox"> I accept the <a href="">terms of service</a>.

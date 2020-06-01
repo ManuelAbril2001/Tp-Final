@@ -20,6 +20,10 @@ module.exports= function(sequelize, dataTypes) {
 
         nombre_de_usuario:{
             type: dataTypes.STRING
+        },
+
+        fecha_de_nacimiento:{
+            type: dataTypes.DATE
         }
 
 

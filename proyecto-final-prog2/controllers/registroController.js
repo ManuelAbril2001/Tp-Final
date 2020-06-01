@@ -10,6 +10,7 @@ module.exports = {
             email: req.body.email,
             contrasenia: req.body.password,
             nombre_de_usuario: req.body.username,
+            fecha_de_nacimiento: req.body.nacimiento
 
         })
         res.redirect("/registro")

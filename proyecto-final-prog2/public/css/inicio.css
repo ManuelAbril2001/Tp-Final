@@ -194,116 +194,135 @@ nav.mqMobile{
   }
  
 
-@media screen and (max-width:768px){
-  .logoMq {
-      margin: 10px;
-      height: 70px;
-      width: 70px;
-      float: left;
+  @media screen and (max-width:768px){
 
-      border: 2px solid white;
-      border-radius: 35px;
+    nav.mqMobile{
       display: block;
-      position: static;
     }
-
-    .botonBuscar{
-      display: none;
-    }
-
-    .resultado{
+    .logoMq {
+        margin: 10px;
+        height: 70px;
+        width: 70px;
+        float: left;
+  
+        border: 2px solid white;
+        border-radius: 35px;
+        display: block;
+        position: static;
+  
+  
+      }
+      .botonBuscar{
+        display: none;
+      }
+  
+      .resultado{
+        text-align: center;
+      }
+  
+  
+  
+      li.logInMq {
+        float: left;
+        list-style-type: none;
+        text-align: center;
+        width: 100%;
+      }
+  
+      .preferidasMq {
+        display: none;
+  
+      }
+  
+  
+    .li1 {
+      list-style-type: none;
       text-align: center;
-    }
-
-  button {
-    color: white;
-    background-color: transparent;
-    font-size: 15px;
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 300;
-    border: 0;
-  }
-
-  li.logInMq {
-    float: left;
-    list-style-type: none;
-    text-align: center;
-    width: 100%;
-  }
-
-  .preferidasMq {
-    display: none;
-  }
-
-  .li1 {
-    list-style-type: none;
-    text-align: center;
-    padding: 5px;
-    color: white;
-    float: left;
-    font-size: 15px;
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 300;
-    width: 100%;
-  }
-
-    li.buscador{
+      padding: 5px;
+      color: white;
       float: left;
+      font-size: 15px;
+      font-family: 'Julius Sans One', sans-serif;
+      font-weight: 300;
       width: 100%;
     }
-
-    li.l1 {
-      float: left;
-    }
-
-    nav.encabezado{
-    display: none;
-    }
-
-    nav.uk-navbar-container{
-      display: block;
-    }
-
-    .uk-navbar-left{
+  
+      li.buscador{
+        float: left;
         width: 100%;
-        background-color: #262626;
-
-    }
-
-    .uk-navbar-item{ display: inline; }
-
-    .uk-navbar-nav{ display:block; }
-    .navbar-collapse{ width:100%; }
-    .uk-navbar-nav li{
+      }
+  
+      li.l1 {
+        float: left;
+      }
+      nav.encabezado{
+      display: none;
+      }
+  
+      nav.uk-navbar-container{
         display: block;
-        padding: 10px;
-        height: 40px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .uk-navbar-nav li a{
-        display: block;
+      }
+  
+      .subtitulos {
+          color: white !important;
+          text-decoration: underline;
+          font-family: 'Julius Sans One', sans-serif;
+          font-weight: bolder;
+          font-size: 18px;
+          margin-top: -90px;
+      }
+  
+      .uk-navbar-left{
+          width: 100%;
+          background-color: #262626;
+  
+      }
+      .uk-navbar-item{ display: inline; }
+  
+      .uk-navbar-nav{ display:block; }
+      .navbar-collapse{ width:100%; }
+      .uk-navbar-nav li{
+          display: block;
+          padding: 10px;
+          height: 40px;
+          border-bottom: 1px solid #ddd;
+      }
+      .uk-navbar-nav li a{
+          display: block;
+          width: 80%;
+          padding: 0.5rem 1rem;
+      }
+      img.movie{
+        float: left;
+        width: 20%;
+      }
+      ul.ul2{
         width: 80%;
-        padding: 0.5rem 1rem;
-    }
-
-    img.movie{
-      float: left;
-      width: 20%;
-    }
-
-    ul.ul2{
-      width: 80%;
-      overflow: hidden;
-      float: right;
-    }
-
-    ul li.li2{
-      width: 30%;
-      margin-bottom: 10px;
-    }
-
-    nav.final{
-      overflow: hidden;
-    }
-  }
+        overflow: hidden;
+        float: right;
+      }
+  
+      ul li.li2{
+        width: 30%;
+        margin-bottom: 10px;
+      }
+  
+      nav.final{
+        overflow: hidden;
+      }
+  
+      button {
+        color: white;
+        background-color: transparent;
+        font-size: 15px;
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: 300;
+        border: 0;
+  
+  
+      }
+  
+      ul.nav{
+        width: 100%;
+      }
+  

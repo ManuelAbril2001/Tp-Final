@@ -70,6 +70,11 @@
                               </a>
                               <li class="logInMq"><button class="button uk-margin-small-right" type="button" uk-toggle="target: #modal-login">Log in</button>
                               </li>
+                              <li class= "li1">
+                                <form class= "logInMq" action="/registro" method="get">
+                                <button type= "submit" action= "/registro">Register</button>
+                              </form>
+                              </li>
                               <a href="/generos">
                                 <li class="li1">Géneros</li>
                               </a>
@@ -82,6 +87,12 @@
                                   <button type="submit" class="botonBuscar">Buscar</button>
                                 </form>
                               </li>
+                              <li class="buscador">
+                                <form class="buscador1" action="/resultados/usuarios" method="get">
+                                  <input id="input" type="search" name="buscador" class="resultado" placeholder="Buscador de Usuarios">
+                                  <button class= "botonBuscar" type="submit">Buscar</button>
+                                </form>
+                              </li>
                             </ul>
                           </ul>
                       </div>
@@ -91,25 +102,26 @@
 
     </header>
 
-    <div id="modal-login" uk-modal>
-      <div class="uk-modal-dialog uk-modal-body">
-          <h2 class="uk-modal-title uk-text-center">Log In</h2>
-          <form class="uk-flex uk-flex-column" action="" method="post">
-            <input type="text" name="nombre" value="" placeholder="Ingrese su nombre">
-            <input type="email" name="email" value="" placeholder="Ingrese su email">
-            <select class="" name="genero">
-              <option value="" selected disabled>Género</option>
-              <option value="h">Hombre</option>
-              <option value="m">Mujer</option>
-              <option value="o">Otro</option>
-            </select>
-              <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close" type="reset">Cancelar</button>
-                <button class="uk-button uk-button-secondary" type="submit">Enviar</button>
-              </p>
-          </form>
-      </div>
+<!-- Login -->
+<div id="modal-login" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+      <h2 class="uk-modal-title uk-text-center">Log In</h2>
+      <form class="uk-flex uk-flex-column" action="" method="post">
+        <input type="email" name="email" value="" placeholder="Ingrese su email">
+        <input type="password" name="password" value="" placeholder="contrasenia">
+        <select class="" name="genero">
+          <option value="" selected disabled>Género</option>
+          <option value="h">Hombre</option>
+          <option value="m">Mujer</option>
+          <option value="o">Otro</option>
+        </select>
+          <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="reset">Cancelar</button>
+            <button class="uk-button uk-button-secondary" type="submit">Enviar</button>
+          </p>
+      </form>
   </div>
+</div>
 
 
     <section>
