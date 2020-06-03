@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Detalle de Usuario</title>
+</head>
+<body>
+   <h1>Estas viendo el perfil de <%= usuario.nombre %></h1>
+<br>
+<ul>
+    <li>
+        EMAIL: <%= usuario.email %>
+    </li>
+    <li>
+        FECHA DE NACIMIENTO: <%= usuario.nacimiento %>
+    </li>
+</ul>
+<br>
+<h4>Sus resenias</h4>
+<% if(resenias.length !=0) { %>
+   <% for(let i=0; i < resenias.length; i++){ %>
+       <p>Resenia de la serie <%= resenias[i].idserie %>, con rating <%= resenias[i].puntaje %></p>
+    <% } %>
+    
+<% } else { %>
+    <p>Este usuario no hizo ninguna resenia</p>
+
+<% } %>
+</body>
+</html>
+
+

@@ -27,18 +27,38 @@ module.exports = {
             moduloLogin.validar(req.body.email, req.body.contrasenia)
         
             .then(resultado => {
-                db.resenias.create({
+
+                if(resultado != null) {
+                    db.resenias.create({
                     texto_resenia: req.body.texto_resenia,
                     puntaje: req.body.puntaje,
                     id_usuario: resultado.id,
                     id_pelicula: req.params.idPelicula
             
+                    })
+                    .then(function(index){
+                        return res.redirect('/peliculas?id='+ req.params.idPelicula)
+                    })
+                    .catch(function(error){
+                        return res.send(error);
+                    })
+            }   
+        })
+    },
+
+    /*detallesUsuario: function(req,res){
+        db.usuarios.findByPk(req.params.id)
+        .then(function(usuarios){
+            db.resenias.findAll({
+                where: {
+                    id: usuarios.id
+                }
             })
-            .then(function(index){
-                return res.redirect('/peliculas?id='+ req.params.idPelicula)
-            })
-            .catch(function(error){
-                return res.send(error);
+            .then(function(resultados){
+                res.render('detallesUsuario',{
+                    usuarios: usuarios,
+                    resenias: resultados,
+                })
             })
         })
     },
@@ -75,7 +95,7 @@ borrar: function(req,res){
     })
         res.redirect('/peliculas');
     
-}
+}*/
 
      
 }
