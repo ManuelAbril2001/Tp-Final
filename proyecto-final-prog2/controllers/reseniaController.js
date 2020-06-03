@@ -41,8 +41,16 @@ module.exports = {
                     })
                     .catch(function(error){
                         return res.send(error);
+
+                        
+                        
                     })
-            }   
+                    
+
+                 }   
+                        else {
+                            res.send('error');
+            }
         })
     },
 

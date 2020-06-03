@@ -6,21 +6,21 @@
     <title>Detalle de Usuario</title>
 </head>
 <body>
-   <h1>Estas viendo el perfil de <%= usuario.nombre %></h1>
+   <h1>Estas viendo el perfil de <%= usuarios.nombre_de_usuario %></h1>
 <br>
 <ul>
     <li>
-        EMAIL: <%= usuario.email %>
+        EMAIL: <%= usuarios.email %>
     </li>
     <li>
-        FECHA DE NACIMIENTO: <%= usuario.nacimiento %>
+        FECHA DE NACIMIENTO: <%= usuarios.fecha_de_nacimiento %>
     </li>
 </ul>
 <br>
 <h4>Sus resenias</h4>
 <% if(resenias.length !=0) { %>
    <% for(let i=0; i < resenias.length; i++){ %>
-       <p>Resenia de la serie <%= resenias[i].idserie %>, con rating <%= resenias[i].puntaje %></p>
+       <p>Resenia de la serie <%= resenias[i].id %>, con rating <%= resenias[i].puntaje %></p>
     <% } %>
     
 <% } else { %>
