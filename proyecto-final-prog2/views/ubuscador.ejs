@@ -116,7 +116,8 @@
         <% for(let i = 0; i < nombre.length; i ++) { %>
             <br>  
           <li>Username: <%=nombre[i].nombre_de_usuario%></li>
-          <li>Email: <%=nombre[i].email%></li>
+         <a href="/detallesUsuario/<%=nombre[i].id%>" <li>ver detalle</li> </a>
+          <li>Email: <%=nombre[i].email%> ver detalle</li>
           <br>
         <% } %>
     <footer>

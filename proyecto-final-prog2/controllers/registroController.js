@@ -16,7 +16,7 @@ module.exports = {
             fecha_de_nacimiento: req.body.nacimiento
 
         })
-        res.redirect("/registro")
+        res.redirect("/")
     },
 
   /*   login: function(email,pass){
