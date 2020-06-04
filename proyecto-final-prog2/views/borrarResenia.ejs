@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Quiere borrar su resenia? </h2>
+    <form action="/login/borrar/<%= deleteId %>" method= "POST" class= "resenias">
+    <div>
+        <input type="email" name="email" placeholder= "EMAIL" autofocus>
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="PASSWORD">
+    </div>
+    <button type="submit">Guardar</button>
+    <button type="Cancel">Cancelar</button>
+</form>
+</body>
+</html>
+

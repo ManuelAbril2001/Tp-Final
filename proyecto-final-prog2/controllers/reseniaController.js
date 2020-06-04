@@ -71,7 +71,7 @@ module.exports = {
                 })
             })
         })
-    },
+    }, 
 
     editar: function(req, res){
         let pedidoResenia = db.resenias.findByPK(req.params.id);

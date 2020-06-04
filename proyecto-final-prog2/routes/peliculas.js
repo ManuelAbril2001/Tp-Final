@@ -10,11 +10,11 @@ router.get('/', controller.index);
 
 // Editar resenia
 
-//router.get('/editar/:id', peliculasController.editar);
+//router.post('/editar/:id', reseniaController.editar); 
 
 // Actualizar resenia
 
-//router.post('/editar/:id', peliculasController.actualizar);
+//router.post('/editar/:id', reseniaController.actualizar); 
 
 // Borrar resenia
 
