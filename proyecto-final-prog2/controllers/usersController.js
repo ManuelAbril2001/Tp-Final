@@ -14,7 +14,7 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(results => {
             if(results!=null){
-                    return res.redirect('/resenias')                  
+                    return res.redirect('/resenia')                  
 
             }else{
                     res.send("error de login")
