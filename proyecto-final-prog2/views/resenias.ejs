@@ -118,14 +118,14 @@
 
   <div class="resenia">
 
-<% if(resenia.length > 0) { %>
-  <% for (let i=0 ; i < resenia.length; i++) {%>
+<% if(usuario.resenias.length > 0) { %>
+  <% for (let i=0 ; i < usuario.resenias.length; i++) {%>
     <div class="camporesenia">
       <p>Resenias :</p>
-      <p> Resenia: <%= resenia[i].texto_resenia %></p>
-      <p> Puntaje: <%= resenia[i].puntaje %>  </p>
-      <p> Fecha de Creacion: <%= resenia[i].fecha_creacion %></p>
-      <p> Fecha de actualizacion: <%= resenia[i].fecha_actualizacion %></p>
+      <p> Resenia: <%= usuario.resenias[i].texto_resenia %></p>
+      <p> Puntaje: <%= usuario.resenias[i].puntaje %>  </p>
+      <p> Fecha de Creacion: <%= usuario.resenias[i].fecha_creacion %></p>
+      <p> Fecha de actualizacion: <%= usuario.resenias[i].fecha_actualizacion %></p>
     </div>
 
      <% } %>

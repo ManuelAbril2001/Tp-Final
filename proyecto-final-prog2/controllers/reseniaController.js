@@ -5,20 +5,20 @@ let moduloLogin = require('../moduloLogin')
 
 module.exports = {
     index: function(req,res){
-        db.resenias.findAll({
-/*             where: [{
-                id_usuario: req.params.id
-            }], */
+        db.usuarios.findAll({
+            where: {
+                id: req.params.id
+            },
             include:{
-                association:"usuario"
+                association:"resenias"
             }
         })
 
         .then(data => {
-           /*  return res.send(data) */
+          
             
-            res.render('resenias', {
-                resenia: data
+            return res.render('resenias', {
+                usuario: data[0]
             })
 
             })
@@ -73,7 +73,7 @@ module.exports = {
         })
     },
 
-    /*editar: function(req, res){
+    editar: function(req, res){
         let pedidoResenia = db.resenias.findByPK(req.params.id);
 
         Promise.all([pedidoResenia])
@@ -105,7 +105,7 @@ borrar: function(req,res){
     })
         res.redirect('/peliculas');
     
-}*/
+}
 
      
 }
