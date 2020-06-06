@@ -146,8 +146,25 @@ footer{
   position: absolute;
   left: 0;
   background-color: #F3EDED;
-  bottom:0;
   
+}
+footer.a{
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  background-color: #F3EDED;
+  
+}
+footer.b{
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  background-color: #F3EDED;
+  bottom: 0;
 }
 
 .final{

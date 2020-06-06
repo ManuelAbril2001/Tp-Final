@@ -57,7 +57,7 @@ module.exports = {
         })
     },
 
-    detallesUsuario: function(req,res){
+     detallesUsuario: function(req,res){
         db.usuarios.findByPk(req.params.id)
         .then(function(usuarios){
             db.resenias.findAll({
@@ -65,13 +65,14 @@ module.exports = {
                     id: req.params.id
                 }]
             })
-            .then(function(resultados){
+        .then(function(resultados){
+            
                 res.render('detallesUsuario',{
                     usuarios: usuarios,
                 })
             })
         })
-    }, 
+    },  
 
     editar: function(req, res){
          db.resenias.findByPk(req.params.id)

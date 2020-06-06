@@ -32,7 +32,7 @@ module.exports = {
                     ]
                 }
             )
-            .then(function(nombre){
+        .then(function(nombre){
                 return res.render('ubuscador', {nombre: nombre})
              })
         })
