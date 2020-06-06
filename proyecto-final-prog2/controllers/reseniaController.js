@@ -74,38 +74,58 @@ module.exports = {
     }, 
 
     editar: function(req, res){
-        let pedidoResenia = db.resenias.findByPK(req.params.id);
+         db.resenias.findByPk(req.params.id)
 
-        Promise.all([pedidoResenia])
-           .then(function(resenia){
-               res.render('editarResenia', {resenia:resenia});
+        
+        .then(function(resenia){
+            res.render('editarResenia', {resenia:resenia});
 
            })
     },
 
    actualizar: function(req,res){
-    db.resenias.update({
-        texto_resenia: req.body.texto_resenia,
-        puntaje: req.body.puntaje,
-        id_pelicula: req.query.id
-   }, {
-       where: {
-           id: req.params.id
-       }
-   });
-
-    res.redirect('/peliculas/' + req.params.id);
+    moduloLogin.validar(req.body.email, req.body.password)
+    .then(function(resultado){
+        if(resultado != null){
+            db.resenias.update({
+                texto_resenia: req.body.texto_resenia,
+                puntaje: req.body.puntaje,
+                id_pelicula: req.query.id,
+                fecha_actualizacion: db.sequelize.literal("CURRENT_DATE")
+           }, {
+               where: {
+                   id: req.params.id
+               }
+           });
+        
+            res.redirect('/');
+        } else{
+            res.send("error")
+        }
+    })
+    
+},
+borrarResenia: function(req, res){
+    db.resenias.findByPk(req.params.id)
+        .then(function(resenia){
+            res.render("borrarResenia", {resenia:resenia})
+           })
 },
 
 borrar: function(req,res){
-    db.resenias.destroy({
-        where: {
-            id: req.params.id
+    moduloLogin.validar(req.body.email, req.body.password)
+    .then(function(resultado){
+        if(resultado != null){
+            db.resenias.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+                res.redirect('/');   
+        }else{
+            res.send("error")
         }
-    })
-        res.redirect('/peliculas');
-    
-}
-
+        }
+    )
      
-}
+}}

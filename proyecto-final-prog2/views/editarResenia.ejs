@@ -7,20 +7,18 @@
 </head>
 <body>
     <h2> Edite su resenia aca </h2>
-    <form action="/resenia/editar/<%=resenias.id" method= "POST">
+    <form action="/resenia/editar/<%=resenia.id %>" method= "POST">
     <div>
         <input type="email" name="email" placeholder= "EMAIL" autofocus>
     </div>
     <input type="password" name="password" placeholder="PASSWORD">
     <div>
-        <input type="text" name="title" value= "<%= resenias.id %>" placeholder= "TITLE" autofocus>
+        <input type="text" name="texto_resenia" value= "<%= resenia.texto_resenia %>" placeholder= "<%= resenia.texto_resenia %>" autofocus>
     </div>
-        <textarea name="description" rows="2" placeholder= "DESCRIPTION"></textarea>
     <div>
         <input type="number" min= "0" max="10" name="puntaje" value= "<%= resenia.puntaje %>" placeholder="PUNTAJE">
     </div>
     <div>
-        <button type="Editar">Editar</button>
         <button type="submit">Guardar</button>
     </div>
 </form> 

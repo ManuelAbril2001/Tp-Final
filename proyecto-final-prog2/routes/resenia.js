@@ -6,17 +6,16 @@ const controller = require('../controllers/reseniaController')
 
 router.get('/:id', controller.index);
 router.post('/crear/:idPelicula', controller.crear)
-
-// Editar resenia
-
-router.post('/resenia/:id', controller.editar); 
+router.get('/editar/:id', controller.editar);
 
 // Actualizar resenia
 
-router.post('/resenia/:id', controller.actualizar); 
+router.post('/editar/:id', controller.actualizar);
 
 // Borrar resenia
+router.get('/borrar/:id', controller.borrarResenia);
 
-router.get('/resenia/:id', controller.borrar);
+router.post('/borrar/:id', controller.borrar);
+
 
 module.exports = router;
