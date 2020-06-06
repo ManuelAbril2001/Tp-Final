@@ -39,8 +39,10 @@ body {
 }
 
 section {
-  margin-top: 100px;
+  margin-top: 150px;
   width: 100%;
+  background-color:black;
+  
 }
 
 /* header */
@@ -144,6 +146,7 @@ footer{
   position: absolute;
   left: 0;
   background-color: #F3EDED;
+  bottom:0;
   
 }
 
@@ -337,4 +340,4 @@ nav.mqMobile{
       ul.nav{
         width: 100%;
       }
-  
+ 
